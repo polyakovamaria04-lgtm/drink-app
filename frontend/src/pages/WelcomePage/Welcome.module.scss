@@ -1,0 +1,69 @@
+.mainWrapper {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  left: 6%;
+  top: 35%;
+  z-index: 1;
+  width: 50%;
+
+  @media #{$desktop} {
+    width: 100%;
+    margin-right: 0;
+    margin-left: 15%;
+  }
+  p {
+    margin-top: 14px;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.33;
+    letter-spacing: -0.02em;
+
+    @media #{$tablet} {
+      font-size: 18px;
+
+      width: 485px;
+    }
+  }
+  h1 {
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+
+    @media #{$tablet} {
+      font-size: 40px;
+    }
+  }
+
+  .buttonsWrapper {
+    margin-top: 40px;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 1.13;
+    display: flex;
+    gap: 14px;
+
+    flex-direction: column;
+
+    @media #{$tablet} {
+      flex-direction: row;
+      align-items: center;
+    }
+
+    & > * {
+      border: 1px solid $color-slate;
+      border-radius: 42px;
+      padding: 18px 44px;
+
+      &:hover {
+        opacity: 0.5;
+      }
+    }
+  }
+  .signUp {
+    background-color: var(--theme-text);
+    color: var(--theme-bg);
+    border: 1px solid var(--theme-text);
+  }
+}

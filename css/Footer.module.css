@@ -1,0 +1,35 @@
+.footerWrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 80px;
+}
+
+.firstContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 40px;
+}
+
+.info {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.29;
+  margin: 164px 0 24px;
+  letter-spacing: -0.02em;
+}
+
+.formText {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.33;
+  max-width: 310px;
+}/*# sourceMappingURL=Footer.module.css.map */

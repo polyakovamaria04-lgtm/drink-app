@@ -1,0 +1,26 @@
+.title {
+  font-weight: 600;
+  font-size: 64px;
+  line-height: 1.06;
+  margin-bottom: 24px;
+  margin: 158px 0 62px;
+}
+
+.drinksList {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  list-style: none;
+
+  @media (max-width: 1024px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (max-width: 600px) {
+    grid-template-columns: 1fr;
+  }
+}
+.content {
+  display: flex;
+  flex-direction: column;
+}

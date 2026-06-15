@@ -1,0 +1,86 @@
+.UserArea {
+  display: flex;
+  gap: 14px;
+  align-items: center;
+  padding: 4px 14px;
+  border: 2px solid transparent;
+  border-radius: 30px;
+  visibility: visible;
+  position: relative;
+  &:hover {
+    border-color: $color-slate;
+  }
+  &:active {
+    transform: scale(0.95);
+  }
+}
+.dropdownMenu {
+  position: absolute;
+  top: 0;
+  width: 177px;
+  height: 134px;
+  background-color: $color-navy;
+  border-radius: 12px;
+  padding: 18px;
+  z-index: 9999;
+  padding: 18px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.userAreaWrapper {
+  position: relative;
+  display: inline-block;
+}
+.logoutBtn {
+  background-color: $color-white;
+  color: $color-dark;
+  border-radius: 42px;
+  width: 141px;
+  height: 42px;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 1.29;
+  border: none;
+  transition: all 0.2s ease-in-out;
+
+  &:hover {
+    background-color: $color-gray;
+  }
+  &:active {
+    transform: scale(0.95);
+  }
+}
+.dropdownBtn {
+  width: 141px;
+  background-color: transparent;
+  border: 2px solid transparent;
+  padding: 4px 8px;
+  border-radius: 20px;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.29;
+  text-align: left;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &:hover {
+    border-color: $color-slate;
+  }
+  &:active {
+    transform: scale(0.95);
+  }
+}
+.editIcon {
+  height: 14px;
+  width: 14px;
+  color: $color-white;
+}
+.userAvatarMini {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}

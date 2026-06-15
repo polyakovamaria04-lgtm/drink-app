@@ -1,0 +1,94 @@
+.card {
+  display: flex;
+  gap: 14px;
+  flex-direction: column;
+  margin-bottom: 60px;
+  overflow: hidden;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.4);
+  }
+}
+
+.image {
+  object-fit: cover;
+  max-width: 400px;
+  width: 100%;
+  max-height: 400px;
+  height: 100%;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.category {
+  font-size: 14px;
+  color: rgba(243, 243, 243, 0.5);
+  letter-spacing: 0.5px;
+}
+
+.seeMoreBtn {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.13;
+  text-align: right;
+  color: $color-pastel;
+}
+
+.name {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.33;
+  color: var(--theme-text);
+}
+//
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.favSeeMore {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 160px;
+  height: 54px;
+  background-color: $color-navy;
+  border-radius: 42px;
+  color: #f3f3f3;
+  text-decoration: none;
+  font-weight: 600;
+  border: none;
+}
+
+.favDelete {
+  width: 56px;
+  height: 54px;
+  background-color: $color-navy;
+  border-radius: 50%;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  @include button-effects;
+}
+.alcoholic {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.13;
+  color: $color-pastel;
+  margin-bottom: 20px;
+}

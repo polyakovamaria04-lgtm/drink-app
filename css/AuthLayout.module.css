@@ -1,0 +1,52 @@
+.authWrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+}
+
+.backgroundContainer {
+  width: 50%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: -webkit-gradient(linear, left top, right top, from(rgb(10, 10, 17)), color-stop(20%, rgba(10, 10, 17, 0.8)), color-stop(50%, rgba(10, 10, 17, 0.3)), color-stop(70%, rgba(10, 10, 17, 0))), url("@/assets/images/authbackground.png");
+  background-image: linear-gradient(to right, rgb(10, 10, 17) 0%, rgba(10, 10, 17, 0.8) 20%, rgba(10, 10, 17, 0.3) 50%, rgba(10, 10, 17, 0) 70%), url("@/assets/images/authbackground.png");
+}
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .backgroundContainer {
+    background-image: -webkit-gradient(linear, left top, right top, from(rgb(10, 10, 17)), color-stop(20%, rgba(10, 10, 17, 0.8)), color-stop(50%, rgba(10, 10, 17, 0.3)), color-stop(70%, rgba(10, 10, 17, 0))), url("@/assets/images/authbackground@2x.png");
+    background-image: linear-gradient(to right, rgb(10, 10, 17) 0%, rgba(10, 10, 17, 0.8) 20%, rgba(10, 10, 17, 0.3) 50%, rgba(10, 10, 17, 0) 70%), url("@/assets/images/authbackground@2x.png");
+  }
+}
+.backgroundContainer {
+  background-size: 50% 100%, cover;
+  background-position: left, right center;
+}
+
+.blurWrapper {
+  position: relative;
+  width: 50%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.blueEllipse,
+.ligthEllipse {
+  position: absolute;
+  pointer-events: none;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  max-width: 558px;
+  max-height: 586px;
+}/*# sourceMappingURL=AuthLayout.module.css.map */

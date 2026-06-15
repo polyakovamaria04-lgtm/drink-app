@@ -1,0 +1,17 @@
+.Avatar {
+  object-fit: cover;
+  border-radius: 50%;
+
+  path:nth-child(1) {
+    fill: $color-white;
+    overflow: hidden;
+  }
+
+  path:nth-child(2) {
+    fill: $color-gray;
+  }
+
+  path:nth-child(3) {
+    fill: $color-gray;
+  }
+}

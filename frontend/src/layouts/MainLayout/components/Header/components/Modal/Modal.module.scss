@@ -1,0 +1,97 @@
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(22, 31, 55, 0.8);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  z-index: 1000;
+
+  animation: fadeIn 0.25s ease-out forwards;
+}
+.modalContent {
+  position: relative;
+  background-color: $color-navy;
+  overflow: hidden;
+
+  border-radius: 16px;
+  box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.7);
+
+  margin: 0 20px;
+
+  animation: scaleUp 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+.closeBtn {
+  background-color: transparent;
+  stroke: $color-white;
+  width: 32px;
+  height: 32px;
+  border: none;
+  position: absolute;
+  top: 18px;
+  right: 18px;
+
+  @include button-effects;
+}
+.logout {
+  border-radius: 16px;
+  width: 500px;
+  height: 216px;
+  padding: 50px;
+}
+.userForm {
+  width: 500px;
+  height: 426px;
+  padding: 50px 50px 75px 50px;
+}
+// log out
+.logoutBox {
+  display: flex;
+  flex-direction: column;
+  gap: 37px;
+  align-items: center;
+  justify-content: center;
+
+  p {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.33;
+    letter-spacing: -0.02em;
+    color: $color-white;
+  }
+}
+.confirmBtn {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 1.13;
+  border-radius: 42px;
+  padding: 18px 69px;
+  width: 196px;
+  height: 54px;
+  color: $color-dark;
+  background-color: $color-white;
+  border: none;
+  @include button-effects;
+}
+.cancelBtn {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 1.13;
+  border-radius: 42px;
+  padding: 18px 69px;
+  width: 192px;
+  height: 54px;
+  background-color: $color-pastel;
+  color: $color-white;
+  border: none;
+  @include button-effects;
+}
+.actions {
+  display: flex;
+  gap: 12px;
+}

@@ -1,0 +1,34 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: $font-main;
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+  transition:
+    color 0.2s ease,
+    text-decoration 0.2s ease;
+  color: var(--theme-text);
+}
+
+input,
+button,
+textarea {
+  color: var(--theme-text);
+}
+body {
+  background-color: var(--theme-bg);
+  color: var(--theme-text);
+  -webkit-font-smoothing: antialiased;
+}
+
+.container {
+  max-width: 1240px;
+  width: 100%;
+  margin: 0 auto;
+  padding-left: clamp(20px, 4vw, 64px);
+  padding-right: clamp(20px, 4vw, 64px);
+}

@@ -1,0 +1,19 @@
+.icons {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+
+  svg {
+    fill: var(--theme-text);
+    width: 44px;
+    height: 44px;
+    border: 1px solid $color-slate;
+    border-radius: 10px;
+    padding: 8px;
+    opacity: 0.8;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+}

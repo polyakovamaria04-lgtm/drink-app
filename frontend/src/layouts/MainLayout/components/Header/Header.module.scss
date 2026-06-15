@@ -1,0 +1,15 @@
+.header {
+  width: 100%;
+  border-bottom: 1px solid $color-slate;
+}
+.headerContainer {
+  display: flex;
+  margin: 22px 0;
+  justify-content: space-between;
+  align-items: center;
+}
+.wrapper {
+  display: flex;
+  gap: 28px;
+  align-items: center;
+}

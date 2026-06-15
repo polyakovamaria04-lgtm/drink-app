@@ -1,0 +1,29 @@
+.categoryTitle {
+  font-weight: 600;
+  font-size: 40px;
+  line-height: 1.1;
+  margin-bottom: 40px;
+}
+.moreBtnWrapper {
+  align-items: center;
+  justify-content: center;
+  margin-top: 18px;
+}
+.otherDrinksBtn {
+  border-radius: 42px;
+  padding: 18px 44px;
+  width: 183px;
+  height: 54px;
+  background-color: var(--theme-text);
+  color: var(--theme-bg);
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 1.13;
+  &:hover {
+    opacity: 0.6;
+  }
+}
+.loader {
+  text-align: center;
+  margin-top: 150px;
+}

@@ -1,0 +1,120 @@
+.drinksTitle {
+  font-weight: 600;
+  font-size: 64px;
+  line-height: 1.06;
+  margin: 160px 0 80px;
+}
+.filterBar {
+  display: flex;
+  margin-bottom: 40px;
+  gap: 8px;
+}
+.searchIcon {
+  stroke: var(--theme-text);
+  width: 20px;
+  height: 20px;
+  background-color: transparent;
+  margin-right: 24px;
+}
+.inputContainer {
+  display: flex;
+  border-radius: 200px;
+  width: 264px;
+  height: 56px;
+  background-color: transparent;
+  border: 1px solid $color-pastel;
+  align-items: center;
+}
+.searchInput {
+  background-color: transparent;
+  width: 234px;
+  border: none;
+  outline: none;
+  padding-left: 24px;
+  color: var(--theme-text);
+}
+.categorySelect {
+  background-color: $color-navy;
+  color: $color-white;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 1.56;
+  text-align: center;
+  height: 56px;
+  border-radius: 200px;
+  padding-right: 18px;
+  width: 100%;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+.selectWrapper {
+  width: 200px;
+  position: relative;
+  &::after {
+    content: "";
+
+    position: absolute;
+    top: 33%;
+    right: 6%;
+
+    width: 20px;
+    height: 20px;
+
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32' fill='none' stroke='%23f3f3f3' stroke-width='2.88' stroke-linecap='round' stroke-linejoin='round'><path d='M8 20l8-8 8 8'></path></svg>");
+    background-size: contain;
+    background-repeat: no-repeat;
+
+    pointer-events: none;
+    opacity: 0.8;
+  }
+  &.isOpen::after {
+    transform: rotate(180deg);
+  }
+}
+.paginationWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px; // Відступ між кружечками
+  margin-top: 40px;
+}
+.arrowBtn {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: none;
+  background-color: transparent;
+  &:hover:not(:disabled) {
+    background-color: $color-blue;
+  }
+}
+
+.pageBtn {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid transparent;
+  background-color: transparent;
+  color: var(--theme-text);
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s ease;
+
+  &:hover:not(:disabled) {
+    border-color: #f3f3f3;
+    background-color: $color-gray;
+  }
+
+  &:disabled {
+    opacity: 0.3;
+    cursor: not-allowed;
+  }
+}
+
+.active {
+  background-color: $color-navy;
+  border-color: $color-navy;
+}

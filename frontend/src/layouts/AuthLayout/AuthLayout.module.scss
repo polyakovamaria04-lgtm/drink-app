@@ -1,0 +1,62 @@
+.authWrapper {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  overflow: hidden;
+  width: 100vw;
+  min-height: 100vh;
+  background-color: $color-dark;
+
+  @media #{$tablet} {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.blurWrapper {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 0;
+}
+
+.backgroundContainer {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 40% center;
+
+  background-image:
+    linear-gradient(
+      to right,
+      rgba(10, 10, 17, 1) 0%,
+      rgba(10, 10, 17, 0.8) 20%,
+      rgba(10, 10, 17, 0.3) 50%,
+      rgba(10, 10, 17, 0) 70%
+    ),
+    url("@/assets/images/authbackground.png");
+
+  @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    background-image:
+      linear-gradient(
+        to right,
+        rgba(10, 10, 17, 1) 0%,
+        rgba(10, 10, 17, 0.8) 20%,
+        rgba(10, 10, 17, 0.3) 50%,
+        rgba(10, 10, 17, 0) 70%
+      ),
+      url("@/assets/images/authbackground@2x.png");
+  }
+  @media #{$tablet} {
+    background-position: center;
+  }
+}
+
+.blueEllipse,
+.ligthEllipse {
+  position: absolute;
+  pointer-events: none;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  max-width: 558px;
+  max-height: 586px;
+}

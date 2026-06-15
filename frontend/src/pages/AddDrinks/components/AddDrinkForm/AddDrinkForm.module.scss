@@ -1,0 +1,87 @@
+.inputContainer {
+  display: flex;
+  flex-direction: column;
+  width: 394px;
+}
+.lineInput {
+  width: 100%;
+  background-color: transparent;
+  padding: 40px 0 18px;
+  border: none;
+  border-bottom: 1px solid $color-pastel;
+  outline: none;
+
+  &:first-child {
+    padding: 0 0 18px;
+  }
+
+  &::placeholder {
+    font-weight: 400;
+    font-size: 16px;
+    letter-spacing: -0.02em;
+    color: $color-pastel;
+  }
+}
+.formRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+
+  border-bottom: 1px solid $color-pastel;
+}
+
+.selectContainer {
+  flex: 1;
+  display: flex;
+  cursor: pointer;
+}
+.rowLabel {
+  font-weight: 400;
+  font-size: 16px;
+  letter-spacing: -0.02em;
+  color: $color-pastel;
+  padding: 40px 0 18px;
+}
+.radioGroup {
+  display: flex;
+  gap: 20px;
+  margin-top: 40px;
+}
+
+.radioLabel {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+
+  font-weight: 400;
+  font-size: 16px;
+  letter-spacing: -0.02em;
+  color: var(--theme-text);
+}
+
+.hiddenRadio {
+  display: none;
+}
+
+.customRadio {
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+
+  border: 2px solid $color-pastel;
+  border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hiddenRadio:checked + .customRadio::after {
+  content: "";
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #f3f3f3;
+}

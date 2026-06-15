@@ -1,0 +1,38 @@
+$font-main: "Manrope", sans-serif;
+
+$color-dark: #0a0a11;
+$color-white: #f3f3f3;
+$color-navy: #161f37;
+$color-slate: #434d67;
+$color-blue: #4070cd;
+$color-green: #bce6d2;
+$color-gray: #939fc0;
+$color-red: rgba(218, 20, 20, 0.5);
+$color-darkgreen: rgba(60, 188, 129, 0.5);
+$color-pastel: rgba(243, 243, 243, 0.5);
+$color-darkblue: rgba(22, 31, 55, 0.5);
+
+:root {
+  --theme-bg: #{$color-dark};
+  --theme-text: #{$color-white};
+  --accent-element: #{$color-slate};
+}
+
+@mixin button-effects() {
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease,
+    transform 0.1s ease;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $color-slate;
+  }
+
+  &:active {
+    transform: scale(0.95);
+  }
+}
+
+$tablet: "(min-width: 768px)";
+$desktop: "(min-width: 1440px)";
