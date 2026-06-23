@@ -81,27 +81,29 @@ export const IngredientsSelector = ({ value = [], onChange }) => {
       <div className={styles.list}>
         {value.map((item, index) => (
           <div key={index} className={styles.row}>
-            <div className={styles.selector}>
-              <LocalSelector
-                autoComplete="new-password"
-                options={ingredientsList}
-                value={item.title}
-                onChange={(val) => handleUpdate(index, "title", val)}
-                placeholder="Select ingredient"
-                isOpen={openIndex === index}
-                onToggle={() =>
-                  setOpenIndex(openIndex === index ? null : index)
-                }
+            <div className={styles.wrapper}>
+              <div className={styles.selector}>
+                <LocalSelector
+                  autoComplete="new-password"
+                  options={ingredientsList}
+                  value={item.title}
+                  onChange={(val) => handleUpdate(index, "title", val)}
+                  placeholder="Select ingredient"
+                  isOpen={openIndex === index}
+                  onToggle={() =>
+                    setOpenIndex(openIndex === index ? null : index)
+                  }
+                />
+              </div>
+
+              <input
+                type="text"
+                className={styles.amountInput}
+                value={item.amount || ""}
+                onChange={(e) => handleUpdate(index, "amount", e.target.value)}
+                placeholder="0 cl"
               />
             </div>
-
-            <input
-              type="text"
-              className={styles.amountInput}
-              value={item.amount || ""}
-              onChange={(e) => handleUpdate(index, "amount", e.target.value)}
-              placeholder="0 cl"
-            />
 
             <button
               type="button"

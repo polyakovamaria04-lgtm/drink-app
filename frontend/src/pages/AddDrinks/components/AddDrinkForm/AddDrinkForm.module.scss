@@ -1,7 +1,9 @@
 .inputContainer {
   display: flex;
   flex-direction: column;
-  width: 394px;
+  width: 100%;
+  max-width: 394px;
+  padding: 0 20px;
 }
 .lineInput {
   width: 100%;
@@ -25,7 +27,7 @@
 .formRow {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-end;
   width: 100%;
 
   border-bottom: 1px solid $color-pastel;
@@ -47,6 +49,11 @@
   display: flex;
   gap: 20px;
   margin-top: 40px;
+  flex-direction: column;
+
+  @media #{$tablet} {
+    flex-direction: row;
+  }
 }
 
 .radioLabel {

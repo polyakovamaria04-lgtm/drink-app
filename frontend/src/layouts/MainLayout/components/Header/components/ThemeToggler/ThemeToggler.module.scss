@@ -1,6 +1,10 @@
 .ThemeToggler {
-  display: inline-block;
-  cursor: pointer;
+  display: none;
+
+  @media #{$tablet} {
+    display: inline-block;
+    cursor: pointer;
+  }
 
   input {
     opacity: 0;

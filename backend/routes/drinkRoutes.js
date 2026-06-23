@@ -98,6 +98,7 @@ router.get("/", async (req, res) => {
 
     const search = req.query.search || "";
     const category = req.query.category || "";
+    const ingredientId = req.query.ingredientId || "";
 
     const query = {};
 
@@ -107,6 +108,10 @@ router.get("/", async (req, res) => {
 
     if (category && category !== "All categories") {
       query.category = category;
+    }
+
+    if (ingredientId) {
+      query["ingredients.ingredientId"] = ingredientId;
     }
 
     const totalDrinks = await Drink.countDocuments(query);

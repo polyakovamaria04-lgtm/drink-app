@@ -1,8 +1,15 @@
 .TitleSection {
   display: flex;
-  gap: 120px;
-  margin: 0;
-  margin-bottom: 200px;
+  flex-direction: column;
+  gap: 54px;
+  margin-bottom: 122px;
+
+  @media #{$desktop} {
+    gap: 120px;
+    flex-direction: row;
+    margin: 0;
+    margin-bottom: 200px;
+  }
 }
 .TextArea {
   display: flex;
@@ -10,10 +17,15 @@
   justify-content: start;
   h1 {
     font-weight: 600;
-    font-size: 64px;
-    line-height: 1.06;
-    margin-top: 185px;
-    max-width: 715px;
+    font-size: 54px;
+    margin-top: 120px;
+
+    @media #{$desktop} {
+      font-size: 64px;
+      line-height: 1.06;
+      margin-top: 185px;
+      max-width: 715px;
+    }
   }
   p {
     font-weight: 400;
@@ -42,7 +54,10 @@
 }
 
 .image {
-  margin-top: 128px;
   width: 359px;
   height: 455px;
+  margin: 0 auto;
+  @media #{$desktop} {
+    margin-top: 128px;
+  }
 }

@@ -1,6 +1,8 @@
 .card {
   display: flex;
   gap: 14px;
+  height: 100%;
+  min-width: 0;
   flex-direction: column;
   margin-bottom: 60px;
   overflow: hidden;
@@ -13,15 +15,22 @@
     box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.4);
   }
 }
+.standartCard {
+  .content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
 
 .image {
   object-fit: cover;
-  max-width: 400px;
+  // max-width: 400px;
+  // max-height: 400px;
   width: 100%;
-  max-height: 400px;
-  height: 100%;
   border-radius: 8px;
   overflow: hidden;
+  aspect-ratio: 1 / 1;
 }
 
 .content {
@@ -63,7 +72,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 160px;
+  max-width: 160px;
+  width: 100%;
   height: 54px;
   background-color: $color-navy;
   border-radius: 42px;
@@ -71,6 +81,10 @@
   text-decoration: none;
   font-weight: 600;
   border: none;
+
+  @media #{$tablet} {
+    width: 160px;
+  }
 }
 
 .favDelete {

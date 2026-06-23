@@ -1,3 +1,25 @@
-.drinks-list {
+.drinksList {
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
   list-style: none;
+  display: grid;
+
+  @media #{$tablet} {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+.myDrinksContainer {
+  padding-top: 140px;
+  width: 100%;
+  h1 {
+    font-weight: 600;
+    font-size: 64px;
+    line-height: 1.06;
+    margin-bottom: 60px;
+  }
+}
+.item {
+  img {
+    max-width: 400px;
+  }
 }

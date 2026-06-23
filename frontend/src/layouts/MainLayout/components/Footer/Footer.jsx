@@ -6,23 +6,30 @@ import { SubscribeForm } from "./components/SubscribeForm/SubscribeForm";
 
 export const Footer = () => {
   return (
-    <div className={`${styles.footerWrapper} container`}>
-      <div className={styles.footer}>
+    <div className={styles.footerWrapper}>
+      <div className={`${styles.footer} container`}>
         <div className={styles.firstContainer}>
-          <Logo />
-          <NetworkIcons />
-          <span className={styles.info}>
-            ©2026 Drink Master. All rights reserved.
-          </span>
+          <div className={styles.logoWrapper}>
+            <Logo />
+            <NetworkIcons />
+          </div>
+
+          <Navigation variant="footer" />
+        </div>
+        <div className={styles.latestContainer}>
+          <p className={styles.formText}>
+            Subscribe up to our newsletter. Be in touch with latest news and
+            special offers, etc.
+          </p>
+          <SubscribeForm />
         </div>
       </div>
-      <Navigation variant="footer" />
-      <div className={styles.latestContainer}>
-        <p className={styles.formText}>
-          Subscribe up to our newsletter. Be in touch with latest news and
-          special offers, etc.
-        </p>
-        <SubscribeForm />
+      <div className={`${styles.legacy} container`}>
+        <span>©2026 Drink Master. All rights reserved.</span>
+        <div className={styles.privacy}>
+          <span>Privacy Policy</span>
+          <span>Terms of Service</span>
+        </div>
       </div>
     </div>
   );

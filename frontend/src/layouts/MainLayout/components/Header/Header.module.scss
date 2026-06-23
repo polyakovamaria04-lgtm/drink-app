@@ -1,15 +1,55 @@
-.header {
-  width: 100%;
-  border-bottom: 1px solid $color-slate;
-}
 .headerContainer {
   display: flex;
-  margin: 22px 0;
+  padding: 22px 0;
   justify-content: space-between;
   align-items: center;
+  width: 100%;
+}
+.line {
+  min-width: 100vw;
+  border-bottom: 1px solid $color-slate;
 }
 .wrapper {
   display: flex;
   gap: 28px;
   align-items: center;
+}
+.burgerIcon {
+  width: 38px;
+  height: 38px;
+  background-color: var(--theme-bg);
+  border: none;
+
+  &:hover {
+    opacity: 0.4;
+  }
+
+  @media #{$desktop} {
+    display: none;
+  }
+}
+.navMenu {
+  flex-direction: column;
+  position: absolute;
+  top: 60px;
+  left: 0;
+  width: 100%;
+  padding: 20px;
+
+  @media #{$desktop} {
+    display: flex !important;
+    flex-direction: row;
+    position: static;
+    justify-content: center;
+  }
+}
+
+.desktopNav {
+  display: none;
+}
+
+@media #{$desktop} {
+  .desktopNav {
+    display: flex;
+  }
 }

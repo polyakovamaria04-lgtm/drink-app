@@ -1,0 +1,27 @@
+.navMobile {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.mobileMenu {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  background-color: var(--theme-bg);
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 32px 26px;
+  border-bottom: 1px solid $color-pastel;
+}
+.wrapper {
+  display: flex;
+  gap: 24px;
+  align-items: center;
+}
+.cross {
+  background-color: var(--theme-bg);
+  border: none;
+}

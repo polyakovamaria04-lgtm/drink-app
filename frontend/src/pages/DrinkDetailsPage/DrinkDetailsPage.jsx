@@ -1,12 +1,24 @@
-import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import api from "../../api/api";
 import styles from "./DrinkDetailsPage.module.scss";
+import { useQuery } from "@tanstack/react-query";
+import { EmptyPage } from "../EmptyPage/EmptyPage";
 
 export const DrinkDetailsPage = () => {
   const { id } = useParams();
-  const [drink, setDrink] = useState(null);
-  const [loading, setLoading] = useState(true);
+
+  const {
+    data: drink,
+    isLoading,
+    isError,
+  } = useQuery({
+    queryKey: ["drink", id],
+    queryFn: async () => {
+      const response = await api.get(`/drinks/${id}`);
+      return response.data;
+    },
+    enabled: !!id,
+  });
 
   const handleAddToFavorites = async () => {
     try {
@@ -18,24 +30,9 @@ export const DrinkDetailsPage = () => {
     }
   };
 
-  useEffect(() => {
-    const fetchDrinkDetails = async () => {
-      try {
-        const response = await api.get(`/drinks/${id}`);
-        setDrink(response.data);
-      } catch (error) {
-        console.error("Error fetching drink details:", error);
-      } finally {
-        setLoading(false);
-      }
-    };
-
-    fetchDrinkDetails();
-  }, [id]);
-
-  if (loading) return <p>Loading...</p>;
-  if (!drink) return <p>Drink not found!</p>;
-
+  if (isLoading) return <EmptyPage message={" "} />;
+  if (isError || !drink)
+    return <EmptyPage message={" Error or Drink not found!"} />;
   return (
     <div className="container">
       <section className={styles.heroSection}>

@@ -169,7 +169,10 @@ export const AddDrinks = () => {
       </section>
 
       <section className={styles.addictional}>
-        <NetworkIcons />
+        <div className={styles.networks}>
+          <h2>Follow Us</h2>
+          <NetworkIcons />
+        </div>
         <PopularDrinks />
       </section>
     </div>

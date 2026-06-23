@@ -1,10 +1,60 @@
 .popularContainer {
-  width: 313px;
-  display: grid;
-  grid: 1fr 2fr;
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  margin-bottom: 140px;
+
+  @media #{$desktop} {
+    max-width: 313px;
+    width: 100%;
+    margin-top: 80px;
+    margin-bottom: 0px;
+  }
 }
+
+.drinkList {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 32px;
+  list-style: none;
+
+  @media #{$desktop} {
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+  }
+}
+
+.drinkItem {
+  display: flex;
+  gap: 8px;
+  width: 100%;
+  min-width: 0;
+
+  @media #{$desktop} {
+    align-items: flex-start;
+  }
+}
+
 .drinkImage {
   width: 90px;
   height: 90px;
   border-radius: 8px;
+  object-fit: cover;
+}
+
+.drinkInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.title {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 1.33;
+}
+.drinkDescription {
+  color: $color-pastel;
+  font-size: 14px;
 }

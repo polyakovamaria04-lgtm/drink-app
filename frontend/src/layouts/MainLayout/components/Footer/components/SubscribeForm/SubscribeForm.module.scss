@@ -2,24 +2,32 @@
   display: flex;
   flex-direction: column;
   gap: 18px;
+  align-items: end;
 }
 .input {
   margin-top: 24px;
   max-width: 310px;
-  height: 56px;
+  width: 100%;
+  height: 46px;
   font-weight: 400;
-  font-size: 17px;
+  font-size: 14px;
   line-height: 1.56;
   text-align: center;
   background-color: transparent;
   border-radius: 200px;
   border: 1px solid var(--theme-text);
+
+  @media #{$tablet} {
+    font-size: 18px;
+    height: 56px;
+  }
 }
 .button {
   max-width: 310px;
-  height: 56px;
+  width: 100%;
+  height: 46px;
   font-weight: 400;
-  font-size: 17px;
+  font-size: 14px;
   background-color: transparent;
   border-radius: 200px;
   border: 1px solid var(--theme-text);
@@ -27,5 +35,10 @@
   &:hover {
     background-color: var(--theme-text);
     color: var(--theme-bg);
+  }
+
+  @media #{$tablet} {
+    height: 56px;
+    font-size: 17px;
   }
 }

@@ -9,7 +9,7 @@ export const DrinkCard = ({
   showDetails = false,
   variant = "default",
 }) => {
-  const cardStyles = `${styles.card} ${variant === "popular" ? styles.popularVariant : ""} ${variant === "favorites" ? styles.favorites : ""}`;
+  const cardStyles = `${styles.card}  ${variant === "standart" ? styles.standartCard : ""}  ${variant === "popular" ? styles.popularVariant : ""} ${variant === "favorites" ? styles.favorites : ""}`;
 
   return (
     <div className={cardStyles}>

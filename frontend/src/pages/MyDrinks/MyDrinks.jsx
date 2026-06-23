@@ -1,68 +1,48 @@
-import { useState, useEffect } from "react";
-import axios from "axios";
+import { useQuery, useMutation, useQueryClient } from "@tanstack/react-query";
+import api from "../../api/api";
 import { EmptyPage } from "../EmptyPage/EmptyPage";
 import { DrinkCard } from "../../components/DrinkCard/DrinkCard";
+import styles from "../MyDrinks/MyDrinks.module.scss";
 
 export const MyDrinks = () => {
-  const [drinks, setDrinks] = useState([]);
-  const [isLoading, setIsLoading] = useState(true);
+  const queryClient = useQueryClient();
 
-  useEffect(() => {
-    const fetchMyDrinks = async () => {
-      try {
-        const token = localStorage.getItem("token");
+  const { data: drinks = [], isLoading } = useQuery({
+    queryKey: ["myDrinks"],
+    queryFn: async () => {
+      const { data } = await api.get("/drinks/own");
+      return Array.isArray(data) ? data : data.drinks || [];
+    },
+  });
 
-        const { data } = await axios.get(
-          "http://localhost:5000/api/drinks/own",
-          {
-            headers: { Authorization: `Bearer ${token}` },
-          },
-        );
-
-        setDrinks(Array.isArray(data) ? data : data.drinks || []);
-      } catch (error) {
-        console.error("Error retrieving beverages:", error);
-        setDrinks([]);
-      } finally {
-        setIsLoading(false);
-      }
-    };
-
-    fetchMyDrinks();
-  }, []);
-
-  const handleDelete = async (id) => {
-    try {
-      const token = localStorage.getItem("token");
-
-      await axios.delete(`http://localhost:5000/api/drinks/own/${id}`, {
-        headers: { Authorization: `Bearer ${token}` },
-      });
-
-      setDrinks((prev) => prev.filter((drink) => drink._id !== id));
-    } catch (error) {
-      alert("Unable to delete the drink");
+  const deleteMutation = useMutation({
+    mutationFn: (id) => api.delete(`/drinks/own/${id}`),
+    onSuccess: () => {
+      queryClient.invalidateQueries({ queryKey: ["myDrinks"] });
+    },
+    onError: (error) => {
       console.error(error);
-    }
-  };
+      alert("Unable to delete the drink");
+    },
+  });
 
-  if (isLoading) return <p>Loading...</p>;
+  if (isLoading) return <EmptyPage message=" " />;
 
   return (
-    <div className="container">
+    <div className={`container ${styles.myDrinksContainer}`}>
       <h1>My Drinks</h1>
 
       {drinks.length === 0 ? (
         <EmptyPage message="You haven't added any of your cocktails yet" />
       ) : (
-        <ul className="drinks-list">
+        <ul className={styles.drinksList}>
           {drinks.map((drink) => (
-            <li key={drink._id}>
+            <li key={drink._id} className={styles.item}>
               <DrinkCard
                 showDetails={true}
                 drink={drink}
                 showSeeMore
-                onDelete={() => handleDelete(drink._id)}
+                onDelete={() => deleteMutation.mutate(drink._id)}
                 variant="favorites"
               />
             </li>

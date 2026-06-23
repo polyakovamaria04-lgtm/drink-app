@@ -1,9 +1,18 @@
 .wrapper {
   display: flex;
-  gap: 94px;
+  gap: 80px;
+  flex-direction: column;
+
+  @media #{$desktop} {
+    flex-direction: row;
+    padding-bottom: 140px;
+    justify-content: space-between;
+    gap: 250px;
+  }
 }
 .formWrapper {
   flex: 1;
+
   h1 {
     margin: 160px 0 60px;
     font-weight: 600;
@@ -18,19 +27,28 @@
   }
 }
 .addictional {
-  width: 314px;
-  flex: 1;
+  // flex: 1;
   overflow: hidden;
-  margin-top: 284px;
+
+  @media #{$desktop} {
+    margin-top: 284px;
+    width: 314px;
+  }
 }
 .upperSection {
   display: flex;
   gap: 40px;
+  margin-bottom: 80px;
+  width: 100%;
+
+  @media #{$tablet} {
+    margin-bottom: 0;
+  }
 }
 .recipeTextarea {
   background-color: transparent;
   border-radius: 20px;
-  min-width: 480px;
+
   min-height: 184px;
   padding: 14px 24px;
 
@@ -38,6 +56,9 @@
     font-weight: 400;
     font-size: 17px;
     line-height: 1.56;
+  }
+  @media #{$tablet} {
+    min-width: 480px;
   }
 }
 .recipeContainer {
@@ -56,4 +77,15 @@
   line-height: 1.13;
   color: var(--theme-bg);
   @include button-effects;
+}
+.networks {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+
+  h2 {
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 1.33;
+  }
 }
