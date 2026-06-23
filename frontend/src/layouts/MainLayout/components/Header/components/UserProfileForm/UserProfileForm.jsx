@@ -4,7 +4,7 @@ import PencilIcon from "@/assets/svg/just-icons/pencil.svg?react";
 import LightBlur from "@/assets/svg/background/lightEllipce.svg?react";
 import BlueBlur from "@/assets/svg/background/blueEllipce.svg?react";
 
-import { Avatar } from "@/assets/Svg/Avatar/Avatar.jsx";
+import { Avatar } from "@/assets/svg/Avatar/Avatar.jsx";
 
 export const UserProfileForm = ({ currentUser, onSave }) => {
   const [name, setName] = useState(currentUser?.name || "");
