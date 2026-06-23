@@ -8,7 +8,7 @@ export const updateProfile = async (req, res) => {
     const updateData = { name };
 
     if (req.file) {
-      updateData.avatarURL = `http://localhost:5000/uploads/${req.file.filename}`;
+      updateData.avatarURL = `${import.meta.env.VITE_API_URL}/uploads/${req.file.filename}`;
     }
 
     const updatedUser = await User.findByIdAndUpdate(userId, updateData, {

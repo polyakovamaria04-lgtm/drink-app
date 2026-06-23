@@ -22,13 +22,16 @@ export const UserArea = ({ setIsAuthenticated }) => {
     try {
       const token = localStorage.getItem("token");
 
-      const response = await fetch("http://localhost:5000/api/user/update", {
-        method: "PATCH",
-        body: formData,
-        headers: {
-          ...(token && { Authorization: `Bearer ${token}` }),
+      const response = await fetch(
+        "${import.meta.env.VITE_API_URL}/api/user/update",
+        {
+          method: "PATCH",
+          body: formData,
+          headers: {
+            ...(token && { Authorization: `Bearer ${token}` }),
+          },
         },
-      });
+      );
 
       if (!response.ok) {
         throw new Error("Error updating profile");
@@ -54,12 +57,15 @@ export const UserArea = ({ setIsAuthenticated }) => {
         const token = localStorage.getItem("token");
         if (!token) return;
 
-        const response = await fetch("http://localhost:5000/api/user/current", {
-          method: "GET",
-          headers: {
-            Authorization: `Bearer ${token}`,
+        const response = await fetch(
+          "${import.meta.env.VITE_API_URL}/api/user/current",
+          {
+            method: "GET",
+            headers: {
+              Authorization: `Bearer ${token}`,
+            },
           },
-        });
+        );
 
         if (response.ok) {
           const data = await response.json();

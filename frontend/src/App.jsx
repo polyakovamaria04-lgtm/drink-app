@@ -33,9 +33,12 @@ function App() {
       if (!token) throw new Error("No token");
 
       try {
-        return await axios.get("http://localhost:5000/api/user/current", {
-          headers: { Authorization: `Bearer ${token}` },
-        });
+        return await axios.get(
+          "${import.meta.env.VITE_API_URL}/api/user/current",
+          {
+            headers: { Authorization: `Bearer ${token}` },
+          },
+        );
       } catch (error) {
         localStorage.removeItem("token");
         setIsAuthenticated(false);

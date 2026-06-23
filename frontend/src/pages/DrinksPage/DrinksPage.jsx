@@ -34,7 +34,7 @@ export const DrinksPage = () => {
     queryKey: ["ingredients"],
     queryFn: async () => {
       const { data } = await axios.get(
-        "http://localhost:5000/api/drinks/ingredients-list",
+        "${import.meta.env.VITE_API_URL}/api/drinks/ingredients-list",
       );
 
       return data;
@@ -51,16 +51,19 @@ export const DrinksPage = () => {
     ],
 
     queryFn: async () => {
-      const { data } = await axios.get("http://localhost:5000/api/drinks", {
-        params: {
-          page: currentPage,
-          limit: 10,
-          search: searchQuery,
-          category:
-            selectedCategory === "All categories" ? "" : selectedCategory,
-          ingredientId: selectedIngredient,
+      const { data } = await axios.get(
+        "${import.meta.env.VITE_API_URL}/api/drinks",
+        {
+          params: {
+            page: currentPage,
+            limit: 10,
+            search: searchQuery,
+            category:
+              selectedCategory === "All categories" ? "" : selectedCategory,
+            ingredientId: selectedIngredient,
+          },
         },
-      });
+      );
       return data;
     },
   });
