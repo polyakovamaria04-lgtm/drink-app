@@ -34,7 +34,7 @@ function App() {
 
       try {
         return await axios.get(
-          "${import.meta.env.VITE_API_URL}/api/user/current",
+          `${import.meta.env.VITE_API_URL}/api/user/current`,
           {
             headers: { Authorization: `Bearer ${token}` },
           },

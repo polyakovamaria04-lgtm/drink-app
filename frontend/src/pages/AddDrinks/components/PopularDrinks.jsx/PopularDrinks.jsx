@@ -9,7 +9,7 @@ export const PopularDrinks = () => {
     const fetchPopular = async () => {
       try {
         const response = await axios.get(
-          "${import.meta.env.VITE_API_URL}/api/drinks/popular",
+          `${import.meta.env.VITE_API_URL}/api/drinks/popular`,
         );
 
         setDrinks(

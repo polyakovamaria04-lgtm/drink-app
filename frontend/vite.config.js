@@ -8,12 +8,11 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 export default defineConfig({
-  // base: "/drink-app/",
   plugins: [react(), svgr()],
   server: {
     proxy: {
       "/api": {
-        target: "${import.meta.env.VITE_API_URL}",
+        target: "https://drink-app-api.onrender.com",
         changeOrigin: true,
         secure: false,
       },

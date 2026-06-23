@@ -8,7 +8,7 @@ export const updateProfile = async (req, res) => {
     const updateData = { name };
 
     if (req.file) {
-      updateData.avatarURL = `${import.meta.env.VITE_API_URL}/uploads/${req.file.filename}`;
+      updateData.avatarURL = `${process.env.BACKEND_URL}/uploads/${req.file.filename}`;
     }
 
     const updatedUser = await User.findByIdAndUpdate(userId, updateData, {
@@ -16,7 +16,9 @@ export const updateProfile = async (req, res) => {
     });
 
     if (!updatedUser) {
-      return res.status(404).json({ message: "User not found" });
+      return res.status(404).json({
+        message: "User not found",
+      });
     }
 
     res.status(200).json({
@@ -24,15 +26,21 @@ export const updateProfile = async (req, res) => {
       avatarURL: updatedUser.avatarURL,
     });
   } catch (error) {
-    res.status(500).json({ message: "Server error", error: error.message });
+    res.status(500).json({
+      message: "Server error",
+      error: error.message,
+    });
   }
 };
+
 export const getCurrentUser = async (req, res) => {
   try {
     const user = await User.findById(req.user.id);
 
     if (!user) {
-      return res.status(404).json({ message: "User not found" });
+      return res.status(404).json({
+        message: "User not found",
+      });
     }
 
     res.status(200).json({
@@ -40,6 +48,9 @@ export const getCurrentUser = async (req, res) => {
       avatarURL: user.avatarURL,
     });
   } catch (error) {
-    res.status(500).json({ message: "Server error", error: error.message });
+    res.status(500).json({
+      message: "Server error",
+      error: error.message,
+    });
   }
 };

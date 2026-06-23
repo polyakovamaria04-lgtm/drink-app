@@ -7,7 +7,7 @@ export const LogOutView = ({ onClose, onLogoutSuccess }) => {
       const token = localStorage.getItem("token");
 
       await axios.post(
-        "${import.meta.env.VITE_API_URL}/api/auth/logout",
+        `${import.meta.env.VITE_API_URL}/api/auth/logout`,
         {},
         {
           headers: { Authorization: `Bearer ${token}` },

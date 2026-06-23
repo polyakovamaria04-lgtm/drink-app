@@ -11,7 +11,7 @@ export const HomePage = () => {
     queryKey: ["drinks"],
     queryFn: async () => {
       const response = await axios.get(
-        "${import.meta.env.VITE_API_URL}/api/drinks?limit=200",
+        `${import.meta.env.VITE_API_URL}/api/drinks?limit=200`,
       );
       return response.data.drinks;
     },

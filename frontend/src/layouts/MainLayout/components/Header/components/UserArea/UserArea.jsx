@@ -23,7 +23,7 @@ export const UserArea = ({ setIsAuthenticated }) => {
       const token = localStorage.getItem("token");
 
       const response = await fetch(
-        "${import.meta.env.VITE_API_URL}/api/user/update",
+        `${import.meta.env.VITE_API_URL}/api/user/update`,
         {
           method: "PATCH",
           body: formData,
@@ -58,7 +58,7 @@ export const UserArea = ({ setIsAuthenticated }) => {
         if (!token) return;
 
         const response = await fetch(
-          "${import.meta.env.VITE_API_URL}/api/user/current",
+          `${import.meta.env.VITE_API_URL}/api/user/current`,
           {
             method: "GET",
             headers: {

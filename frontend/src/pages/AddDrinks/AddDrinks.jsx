@@ -33,7 +33,7 @@ export const AddDrinks = () => {
     const fetchIngredients = async () => {
       try {
         const res = await axios.get(
-          "${import.meta.env.VITE_API_URL}/api/drinks/ingredients-list",
+          `${import.meta.env.VITE_API_URL}/api/drinks/ingredients-list`,
         );
         setIngredientsList(res.data);
       } catch (error) {
@@ -90,7 +90,7 @@ export const AddDrinks = () => {
 
     try {
       const response = await axios.post(
-        "${import.meta.env.VITE_API_URL}/api/drinks/own",
+        `${import.meta.env.VITE_API_URL}/api/drinks/own`,
         dataToSend,
         {
           headers: { Authorization: `Bearer ${token}` },
