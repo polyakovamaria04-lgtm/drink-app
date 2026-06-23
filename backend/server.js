@@ -10,8 +10,27 @@ import userRoutes from "./routes/userRoutes.js";
 dotenv.config({ path: "./.env" });
 
 const app = express();
+const allowedOrigin = process.env.FRONTEND_URL;
 
-app.use(cors());
+app.use(
+  cors({
+    origin: function (origin, callback) {
+      if (!origin) return callback(null, true);
+
+      const allowedOrigins = [
+        process.env.FRONTEND_URL,
+        "http://localhost:5173",
+      ];
+      if (allowedOrigins.indexOf(origin) !== -1) {
+        callback(null, true);
+      } else {
+        callback(new Error("Not allowed by CORS"));
+      }
+    },
+    methods: ["GET", "POST", "PUT", "DELETE"],
+    credentials: true,
+  }),
+);
 app.use(express.json());
 app.use("/uploads", express.static("uploads"));
 
