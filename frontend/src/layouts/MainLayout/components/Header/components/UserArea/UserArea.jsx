@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 import styles from "./UserArea.module.scss";
-import { Avatar } from "@/assets/Svg/Avatar/Avatar.jsx";
+import { Avatar } from "@/assets/svg/Avatar/Avatar.jsx";
 import { UserProfileForm } from "../UserProfileForm/UserProfileForm";
 import { Modal } from "../Modal/Modal";
 import { LogOutView } from "../Modal/LogOutView";
