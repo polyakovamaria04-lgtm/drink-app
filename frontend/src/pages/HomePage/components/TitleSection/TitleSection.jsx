@@ -1,6 +1,7 @@
 import styles from "../TitleSection/TitleSection.module.scss";
 import heroImage1x from "@/assets/images/design/hero.png";
 import heroImage2x from "@/assets/images/design/hero@2x.png";
+import { Link } from "react-router-dom";
 
 export const TitleSection = () => {
   return (
@@ -12,9 +13,11 @@ export const TitleSection = () => {
           destination for exploring, crafting, and mastering the world's finest
           beverages.
         </p>
-        <button className={styles.button} type="button">
-          Add drink
-        </button>
+        <Link to="/add-drink">
+          <button className={styles.button} type="button">
+            Add drink
+          </button>
+        </Link>
       </div>
       <img
         className={styles.image}
