@@ -4,7 +4,7 @@ import PencilIcon from "@/assets/svg/just-icons/pencil.svg?react";
 import LightBlur from "@/assets/svg/background/lightEllipce.svg?react";
 import BlueBlur from "@/assets/svg/background/blueEllipce.svg?react";
 
-import { Avatar } from "@/assets/svg/Avatar/Avatar.jsx";
+import { Avatar } from "../../../../../../assets/svg/Avatar/Avatar";
 
 export const UserProfileForm = ({ currentUser, onSave }) => {
   const [name, setName] = useState(currentUser?.name || "");
@@ -14,9 +14,13 @@ export const UserProfileForm = ({ currentUser, onSave }) => {
   const [avatarFile, setAvatarFile] = useState(null);
   const fileInputRef = useRef(null);
 
+  const [imageError, setImageError] = useState(false);
+
   const handleFileChange = (e) => {
     const file = e.target.files[0];
+
     if (file) {
+      setImageError(false);
       setAvatarFile(file);
       setAvatarPreview(URL.createObjectURL(file));
     }
@@ -44,11 +48,12 @@ export const UserProfileForm = ({ currentUser, onSave }) => {
           className={styles.avatarContainer}
           onClick={() => fileInputRef.current.click()}>
           <div className={styles.avatarWrapper}>
-            {avatarPreview ? (
+            {avatarPreview && !imageError ? (
               <img
                 src={avatarPreview}
-                alt="User avatar"
+                alt={name}
                 className={styles.avatarImage}
+                onError={() => setImageError(true)}
               />
             ) : (
               <div className={styles.avatarPlaceholder}>

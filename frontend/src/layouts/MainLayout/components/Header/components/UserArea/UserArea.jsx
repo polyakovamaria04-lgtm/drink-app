@@ -18,6 +18,8 @@ export const UserArea = ({ setIsAuthenticated }) => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const userAreaRef = useRef(null);
 
+  const [imageError, setImageError] = useState(false);
+
   const handleSaveProfile = async (formData) => {
     try {
       const token = localStorage.getItem("token");
@@ -109,16 +111,16 @@ export const UserArea = ({ setIsAuthenticated }) => {
         <div
           className={styles.UserArea}
           onClick={() => setIsDropdownOpen(!isDropdownOpen)}>
-          {user.avatarURL ? (
+          {user.avatarURL && !imageError ? (
             <img
               src={user.avatarURL}
               alt={user.name}
               className={styles.userAvatarMini}
+              onError={() => setImageError(true)}
             />
           ) : (
             <Avatar />
           )}
-
           <span className={styles.UserNameArea}>
             {user.name || "Loading..."}
           </span>
