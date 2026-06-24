@@ -17,17 +17,14 @@ app.use(
     origin: function (origin, callback) {
       if (!origin) return callback(null, true);
 
-      const allowedOrigins = [
-        process.env.FRONTEND_URL,
-        "http://localhost:5173",
-      ];
+      const allowedOrigins = [process.env.FRONTEND_URL, ""];
       if (allowedOrigins.indexOf(origin) !== -1) {
         callback(null, true);
       } else {
         callback(new Error("Not allowed by CORS"));
       }
     },
-    methods: ["GET", "POST", "PUT", "DELETE"],
+    methods: ["GET", "POST", "PUT", "DELETE", "PATCH"],
     credentials: true,
   }),
 );

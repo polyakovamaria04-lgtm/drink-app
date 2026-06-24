@@ -6,7 +6,7 @@
     "glass": "Highball glass",
     "description": "A sophisticated and warming autumn cocktail that beautifully balances the rich, deep notes of dark rum with a subtle hint of citrus and spice. Perfect for cozy evenings or classy gatherings.",
     "recipe": "Fill a highball glass with crushed ice. Pour in the dark rum and freshly squeezed lime juice, then top with high-quality ginger beer. Gently stir from the bottom up to combine the layers and garnish with a fresh lime wheel.",
-    "imgUrl": "http://localhost:5173/images/a-furlong-too-late.png",
+    "imgUrl": "/images/a-furlong-too-late.png",
     "ingredients": [
       { "title": "Dark rum", "type": "Alcohol" },
       { "title": "Ginger beer", "type": "Beverage" },
@@ -20,7 +20,7 @@
     "glass": "Collins glass",
     "description": "The Atlantic Sun is a vibrant, sun-drenched cocktail that brings a bright splash of fruit flavor together with a smooth spirit base, capturing the essence of a perfect beach sunset in every sip.",
     "recipe": "Combine vodka, apricot brandy, and fresh orange juice in a cocktail shaker filled with ice. Shake vigorously for about 15 seconds until well-chilled. Strain into a tall Collins glass over fresh ice and top with a splash of club soda.",
-    "imgUrl": "http://localhost:5173/images/atlantic-sun.png",
+    "imgUrl": "/images/atlantic-sun.png",
     "ingredients": [
       { "title": "Vodka", "type": "Alcohol" },
       { "title": "Apricot brandy", "type": "Alcohol" },
@@ -35,7 +35,7 @@
     "glass": "Shot glass",
     "description": "The B-52 is a visually stunning, layered distinct shot that delivers a rich, creamy coffee and citrus taste experience. It is a legendary party classic that always impresses guests with its clean presentation.",
     "recipe": "Carefully layer the ingredients in a standard shot glass. Pour the coffee liqueur first. Next, slowly float the Irish cream over the back of a bar spoon to create the second layer. Repeat the same technique with the triple sec for the top layer.",
-    "imgUrl": "http://localhost:5173/images/b-52.png",
+    "imgUrl": "/images/b-52.png",
     "ingredients": [
       { "title": "Kahlua", "type": "Alcohol" },
       { "title": "Baileys Irish Cream", "type": "Alcohol" },
@@ -50,7 +50,7 @@
     "glass": "Collins glass",
     "description": "The Berry Deadly is a dark and mysteriously sweet cocktail that packs a punch with its rich blend of forest berries and strong spirit base. It features a deep crimson hue that looks incredibly striking and sophisticated in any high-quality glassware.",
     "recipe": "Muddle fresh blackberries and raspberries at the bottom of a shaker with simple syrup. Add crème de mûre, premium gin, and fresh lemon juice, then shake vigorously with ice for 15 seconds. Double strain into a tall Collins glass filled with crushed ice and garnish with a fresh sprig of rosemary.",
-    "imgUrl": "http://localhost:5173/images/berry-deadly.png",
+    "imgUrl": "/images/berry-deadly.png",
     "ingredients": [
       { "title": "Gin", "type": "Alcohol" },
       { "title": "Crème de mûre", "type": "Alcohol" },
@@ -66,7 +66,7 @@
     "glass": "Coupe glass",
     "description": "Inspired by classic spy glamour, the Casino Royale is an elegant, crisp, and slightly dry cocktail with a beautiful golden shimmer. It balances the sharp botanical notes of gin with the sweet complexity of maraschino, making it the ultimate choice for sophisticated evening sipping.",
     "recipe": "Pre-chill your coupe glass in the freezer. In a mixing glass filled with clean ice cubes, combine London Dry gin, dry vermouth, Maraschino liqueur, and a couple of dashes of orange bitters. Stir gently and continuously for about 30 seconds to achieve perfect dilution without clouding the drink, then strain cleanly into the chilled glass and express a fresh lemon twist over the top.",
-    "imgUrl": "http://localhost:5173/images/casino-royale.png",
+    "imgUrl": "/images/casino-royale.png",
     "ingredients": [
       { "title": "Gin", "type": "Alcohol" },
       { "title": "Dry Vermouth", "type": "Alcohol" },
@@ -81,7 +81,7 @@
     "glass": "Margarita glass",
     "description": "The Frozen Mint Daiquiri is an intensely icy, bright, and invigorating tropical blender drink that takes the classic rum-lime combination to a whole new level of freshness. The addition of icy blended mint makes it absolutely unbeatable for cooling down during scorching summer afternoons.",
     "recipe": "Pour white rum, freshly squeezed lime juice, and rich simple syrup into a high-powered electric blender. Strip a generous handful of fresh mint leaves from their stems and toss them directly into the pitcher along with two large cups of crushed ice. Blend on maximum speed until the texture becomes completely uniform, thick, and slushy, then pour immediately into a chilled glass and serve with a straw.",
-    "imgUrl": "http://localhost:5173/images/frozen-mint-daiquiri.png",
+    "imgUrl": "/images/frozen-mint-daiquiri.png",
     "ingredients": [
       { "title": "White rum", "type": "Alcohol" },
       { "title": "Lime juice", "type": "Ingredient" },
@@ -96,7 +96,7 @@
     "glass": "Highball glass",
     "description": "A decadent and creamy dessert style shake that perfectly marries the distinctive, warm almond aroma of Italian Amaretto liqueur with smooth dairy elements. It functions as a luxurious sweet treat that satisfies both your cocktail cravings and your sweet tooth at the very same time.",
     "recipe": "Place three generous scoops of premium vanilla bean ice cream into your blender base. Pour in the specified measure of Amaretto liqueur along with a chilled splash of heavy cream or whole milk to assist with blending. Process the ingredients on medium speed until smooth and velvety, pour into a presentation glass, and top with toasted almond flakes and a light dusting of cocoa powder.",
-    "imgUrl": "http://localhost:5173/images/amaretto-shake.png",
+    "imgUrl": "/images/amaretto-shake.png",
     "ingredients": [
       { "title": "Amaretto", "type": "Alcohol" },
       { "title": "Vanilla ice cream", "type": "Ingredient" },
@@ -110,7 +110,7 @@
     "glass": "Highball glass",
     "description": "This traditional Banana Milk Shake is naturally sweet, wonderfully thick, and rich in wholesome tropical flavors without any added alcohol. It serves as an incredibly comforting, energizing afternoon snack or quick breakfast alternative that appeals to both children and adults.",
     "recipe": "Peel a fully ripe, speckled banana, slice it into uniform chunks, and place them inside the blender jar. Pour in ice-cold whole milk and add a small dollop of natural honey or vanilla extract for an extra layer of depth. Blend on high speed for approximately 40 seconds until the fruit is completely liquefied and a beautiful frothy layer forms on top. Serve immediately while frosty.",
-    "imgUrl": "http://localhost:5173/images/banana-milk-shake.png",
+    "imgUrl": "/images/banana-milk-shake.png",
     "ingredients": [
       { "title": "Banana", "type": "Fruit" },
       { "title": "Milk", "type": "Ingredient" },
@@ -124,7 +124,7 @@
     "glass": "Tall glass",
     "description": "A vibrant and colorful explosion of pure summer joy, this non-alcoholic Fruit Shake features a healthy, antioxidant-rich blend of fresh orchard and garden fruits. It delivers a refreshing, naturally tart profile that rehydrates the body beautifully after a workout or on a sunny day at the beach.",
     "recipe": "Wash and hull fresh strawberries, then add them to the blender along with a handful of ripe blueberries and a peeled, sliced sweet mango. Splash in a bit of freshly pressed apple juice to create a liquid base, throw in three ice cubes, and cover tightly. Run the machine on high until all fibers are completely broken down into a silky, thick smoothie-like consistency. Garnish with a strawberry on the rim.",
-    "imgUrl": "http://localhost:5173/images/fruit-shake.png",
+    "imgUrl": "/images/fruit-shake.png",
     "ingredients": [
       { "title": "Strawberries", "type": "Fruit" },
       { "title": "Blueberries", "type": "Fruit" },
@@ -139,7 +139,7 @@
     "glass": "Cocktail glass",
     "description": "The Blue Margarita is a vibrant and refreshing cocktail with a striking blue color and a smooth citrus flavor. This tropical twist on the classic Margarita combines tequila, blue curaçao, and fresh lime juice to create a bright and slightly sweet drink that’s perfect for summer parties or relaxing evenings.",
     "recipe": "Fill a cocktail shaker with ice and pour in tequila, blue curaçao, and freshly squeezed lime juice. Shake well until chilled. Rim a cocktail glass with salt if desired, then strain the cocktail into the glass over fresh ice. Garnish with a lime wheel and serve immediately.",
-    "imgUrl": "http://localhost:5173/images/blue-margarita.png",
+    "imgUrl": "/images/blue-margarita.png",
     "ingredients": [
       { "title": "Tequila", "type": "Alcohol" },
       { "title": "Blue Curaçao", "type": "Alcohol" },
@@ -153,7 +153,7 @@
     "type": "Alcoholic",
     "glass": "Highball glass",
     "description": "Gin Lemon is a crisp and refreshing cocktail that perfectly balances botanical gin flavors with sparkling lemonade. It’s light, easy to drink, and ideal for warm weather or casual gatherings. The bright citrus notes make it a timeless classic for gin lovers.",
-    "imgUrl": "http://localhost:5173/images/gin-lemon.png",
+    "imgUrl": "/images/gin-lemon.png",
     "recipe": "Fill a highball glass with ice cubes and pour in the gin. Top with chilled lemonade and gently stir to combine the flavors. Garnish with a lemon slice or fresh mint for extra freshness. Serve cold and enjoy immediately.",
     "ingredients": [
       { "title": "Gin", "type": "Alcohol" },
@@ -168,7 +168,7 @@
     "type": "Alcoholic",
     "glass": "Old-fashioned glass",
     "description": "The Gin Smash is a refreshing and aromatic cocktail packed with fresh citrus and herbs. This modern classic combines gin, lemon, sugar, and mint to create a bright and balanced drink that’s both elegant and incredibly easy to make at home.",
-    "imgUrl": "http://localhost:5173/images/gin-smash.png",
+    "imgUrl": "/images/gin-smash.png",
     "recipe": "Muddle fresh mint leaves with sugar syrup and lemon wedges in a shaker. Add gin and ice, then shake vigorously until well chilled. Strain into an old-fashioned glass filled with crushed ice and garnish with extra mint leaves and a lemon slice.",
     "ingredients": [
       { "title": "Gin", "type": "Alcohol" },
@@ -184,7 +184,7 @@
     "type": "Alcoholic",
     "glass": "Punch glass",
     "description": "Spring Punch is a fruity and colorful drink that captures the fresh flavors of the season. With citrus juices, sparkling soda, and light spirits, this cocktail is perfect for brunches, garden parties, and festive gatherings.",
-    "imgUrl": "http://localhost:5173/images/spring-punch.png",
+    "imgUrl": "/images/spring-punch.png",
     "recipe": "Combine fruit juices, vodka, and sparkling water in a large pitcher filled with ice. Stir gently and add sliced fruits such as oranges, strawberries, and lemons for extra flavor. Serve in punch glasses over ice and garnish with fresh mint.",
     "ingredients": [
       { "title": "Vodka", "type": "Alcohol" },
@@ -200,7 +200,7 @@
     "type": "Alcoholic",
     "glass": "Collins glass",
     "description": "The Lone Tree Cooler is a smooth and refreshing cocktail with citrus notes and a lightly sparkling finish. It’s an easy-drinking beverage that works perfectly for relaxed evenings or outdoor events.",
-    "imgUrl": "http://localhost:5173/images/lone-tree-coole.png",
+    "imgUrl": "/images/lone-tree-coole.png",
     "recipe": "Fill a Collins glass with ice and pour in the vodka and citrus juice. Top with soda water and stir gently to combine. Garnish with a lime wedge and serve chilled for a crisp and refreshing experience.",
     "ingredients": [
       { "title": "Vodka", "type": "Alcohol" },
@@ -215,7 +215,7 @@
     "type": "Alcoholic",
     "glass": "Rocks glass",
     "description": "The Elderflower Caipirinha is a floral twist on the classic Brazilian cocktail. Fresh lime and sweet elderflower liqueur pair beautifully with cachaça, creating a drink that’s refreshing, fragrant, and slightly exotic.",
-    "imgUrl": "http://localhost:5173/images/elderflower-caipirinha.png",
+    "imgUrl": "/images/elderflower-caipirinha.png",
     "recipe": "Muddle lime wedges with sugar in a rocks glass. Add cachaça, elderflower liqueur, and crushed ice, then stir thoroughly until chilled. Garnish with a lime wheel and serve immediately.",
     "ingredients": [
       { "title": "Cachaça", "type": "Alcohol" },
@@ -231,7 +231,7 @@
     "type": "Alcoholic",
     "glass": "Highball glass",
     "description": "Blueberry Mojito is a fruity variation of the classic Mojito that combines fresh blueberries with mint, lime, and rum. The result is a colorful and refreshing cocktail with a sweet berry flavor and a cool minty finish.",
-    "imgUrl": "http://localhost:5173/images/blueberry-mojito.png",
+    "imgUrl": "/images/blueberry-mojito.png",
     "recipe": "Muddle blueberries, mint leaves, sugar, and lime juice in a shaker. Add rum and ice, then shake lightly. Pour into a highball glass filled with ice and top with soda water. Garnish with blueberries and fresh mint leaves.",
     "ingredients": [
       { "title": "Light Rum", "type": "Alcohol" },
@@ -247,7 +247,7 @@
     "type": "Alcoholic",
     "glass": "Highball glass",
     "description": "The Greyhound is a simple yet refreshing cocktail made with grapefruit juice and vodka or gin. Its clean citrus flavor and slightly tart finish make it a timeless drink that’s easy to prepare and perfect for any occasion.",
-    "imgUrl": "http://localhost:5173/images/greyhound.png",
+    "imgUrl": "/images/greyhound.png",
     "recipe": "Fill a highball glass with ice and pour in vodka or gin. Top with fresh grapefruit juice and stir gently. Garnish with a grapefruit wedge and serve immediately while chilled.",
     "ingredients": [
       { "title": "Vodka", "type": "Alcohol" },
@@ -262,7 +262,7 @@
     "type": "Alcoholic",
     "glass": "Highball glass",
     "description": "Dark and Stormy is a bold and refreshing cocktail famous for its spicy ginger beer and dark rum combination. The drink has a rich, slightly sweet flavor with a refreshing citrus kick that makes it both dramatic and satisfying.",
-    "imgUrl": "http://localhost:5173/images/dark-and-stormy.png",
+    "imgUrl": "/images/dark-and-stormy.png",
     "recipe": "Fill a highball glass with ice and pour in ginger beer. Slowly float dark rum on top to create the layered effect. Add fresh lime juice and garnish with a lime wedge before serving.",
     "ingredients": [
       { "title": "Dark Rum", "type": "Alcohol" },
@@ -277,7 +277,7 @@
     "type": "Alcoholic",
     "glass": "Margarita glass",
     "description": "Winter Rita is a seasonal margarita variation filled with warm citrus flavors and cozy winter spices. This festive cocktail combines tequila with cranberry and orange notes, making it ideal for holiday celebrations and cold evenings.",
-    "imgUrl": "http://localhost:5173/images/winter-rita.png",
+    "imgUrl": "/images/winter-rita.png",
     "recipe": "Shake tequila, cranberry juice, orange juice, and lime juice with ice until chilled. Strain into a margarita glass with fresh ice and garnish with orange slices or cinnamon sticks for a festive presentation.",
     "ingredients": [
       { "title": "Tequila", "type": "Alcohol" },
