@@ -6,7 +6,7 @@
     "glass": "Highball glass",
     "description": "A sophisticated and warming autumn cocktail that beautifully balances the rich, deep notes of dark rum with a subtle hint of citrus and spice. Perfect for cozy evenings or classy gatherings.",
     "recipe": "Fill a highball glass with crushed ice. Pour in the dark rum and freshly squeezed lime juice, then top with high-quality ginger beer. Gently stir from the bottom up to combine the layers and garnish with a fresh lime wheel.",
-    "imgUrl": "/images/a-furlong-too-late.png",
+
     "ingredients": [
       { "title": "Dark rum", "type": "Alcohol" },
       { "title": "Ginger beer", "type": "Beverage" },
